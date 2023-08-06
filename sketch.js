@@ -1,13 +1,22 @@
-// setup - run once when the code is first starts
-function setup() {
-  createCanvas(200, 200); // this sets the size of the area in which we can draw things
-  background(170);
+//your parameter variables go here!
+let headX  = 20;
+let headY = 20;
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(A4);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
 }
 
-// draw - this function loops, the code within read through repeatedly while running
-function draw() {
-  DrawCapybaraHead(40, 100);
-  DrawCapybaraHead(100, 100);
+// setup - run once when the code is first starts
+function wallpaper_background() {
+  background(0, 255, 240);
 }
 
 function DrawCapybaraHead(headX, headY) {

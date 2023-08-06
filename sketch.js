@@ -1,12 +1,13 @@
+
 //your parameter variables go here!
-let headX  = 20;
-let headY = 20;
+let rect_width  = 20;
+let rect_height = 20;
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GLIDE_WALLPAPER);
-  pWallpaper.resolution(A4);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -15,8 +16,8 @@ function setup_wallpaper(pWallpaper) {
 }
 
 // setup - run once when the code is first starts
-function wallpaper_background() {
-  background(0, 255, 240);
+function setup() {
+  background(255, 255, 240);
 }
 
 function DrawCapybaraHead(headX, headY) {
